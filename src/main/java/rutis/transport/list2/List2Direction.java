@@ -19,7 +19,20 @@ public class List2Direction {
     }
 
     public boolean add(int position, Apple value) {
-        return false;
+        Node a = first;
+        for (int i = 1; i < position; ++i) {
+            a = a.next;
+        }
+        //return false
+        Node b = a;
+        a = new Node(value);
+        a.prev = b.prev;
+        a.next = b;
+        a.prev.next = a;
+        b.prev = a;
+        return true;
+
+
     }
 
     public void sort() {
