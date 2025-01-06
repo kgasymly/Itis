@@ -1,6 +1,6 @@
 package rutis.transport.list2;
 
-public class Apple implements CanCompare {
+public class Apple implements CanCompare{
     private String color;
     private int weight;
     private String kind;
@@ -13,14 +13,22 @@ public class Apple implements CanCompare {
         this.price = price;
     }
 
-
-    @Override
-    public int compare(CanCompare other) {
-        return this.price - ((Apple)other).price;
+    public int getPrice() {
+        return price;
     }
 
-    public int getPrice () {
-        return price;
+    public int getWeight() {
+        return weight;
+    }
+
+    @Override
+    public int compare(CanCompare obj){
+        Apple apple = (Apple) obj;
+        if (this.weight == apple.weight){
+            return 0;
+        }else if (this.weight > apple.weight){
+            return 1;
+        }return -1;
     }
 
     @Override

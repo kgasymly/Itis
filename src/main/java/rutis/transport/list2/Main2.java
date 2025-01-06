@@ -12,7 +12,7 @@ public class Main2 {
 
         list2.print();
 
-        list2.add(3,new Apple("Зеленый",64,"Семеринская",125));
+        list2.add(new Apple("Зеленый",64,"Семеринская",125));
 
         list2.print();
 
