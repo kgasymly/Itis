@@ -23,7 +23,6 @@ public class List2Direction {
         for (int i = 1; i < position; ++i) {
             a = a.next;
         }
-        //return false
         Node b = a;
         a = new Node(value);
         a.prev = b.prev;
